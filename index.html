@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- swiper style.css -->
+  <link rel="stylesheet" href="swiper/swiper-bundle.css">
+  <!-- STYLES-->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+  <link rel="shortcut icon" href="favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Urban Closet." />
+  <link rel="manifest" href="favicon/site.webmanifest" />
+  <!-- FONTS PRELOAD
+  <link rel="preload" href="fonts/Satoshi-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Satoshi-Medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Satoshi-Bold.woff2" as="font" crossorigin="anonymous"> -->
+  <title>Urban Closet.</title>
+</head>
+
+<body>
+  <header class="header">
+    <!-- sign up block -->
+    <div class="sign-up">
+      <div class="sign-up-wrapper">
+        <p class="sign-up-wrapper__text">
+          Sign up&nbsp;and get&nbsp;20% off to&nbsp;your first order.
+          <a href="#" class="sign-up-wrapper__link">Sign Up&nbsp;Now</a>
+        </p>
+        <button class="sign-up-wrapper__close-btn btn" type="button" id="signUpClose">
+          <svg class="sign-up-wrapper__close-icon" width="24" height="24" aria-hidden="true">
+            <use xlink:href="./images/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <ul class="header__list-mobile">
+      <li class="header__item">
+        <a href="#" class="header__link  header__link-mobile">
+          Shop
+          <svg width="16" height="16" aria-hidden="true">
+            <use xlink:href="./images/sprite.svg#icon-arrow-down"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="header__item">
+        <a href="#" class="header__link  header__link-mobile">On Sale</a>
+      </li>
+      <li class="header__item">
+        <a href="#" class="header__link  header__link-mobile">New Arrivals</a>
+      </li>
+      <li class="header__item">
+        <a href="#" class="header__link  header__link-mobile">Brands</a>
+      </li>
+    </ul>
+    <div class="container">
+      <!-- header main block -->
+      <div class="header__wrapper">
+        <button class="header__burger burger" type="button" aria-label="Открыть бургерное меню">
+          <span class="burger__menu"></span>
+          <span class="burger__span"></span>
+        </button>
+        <img src="images/logo.png" alt="shop logo" loading="lazy" class="header__logo">
+        <ul class="header__list">
+          <li class="header__item">
+            <a href="#" class="header__link" id="headerDropDown">
+              Shop
+              <svg class="header__link-icon" width="16" height="16" aria-hidden="true">
+                <use xlink:href="./images/sprite.svg#icon-arrow-down"></use>
+              </svg>
+            </a>
+            <ul class="header__sub-list" id="headerSubMenu">
+              <li class="header__sub-item">
+                <a href="#" class="header__sub-link">Casual</a>
+              </li>
+              <li class="header__sub-item">
+                <a href="#" class="header__sub-link">Formal</a>
+              </li>
+              <li class="header__sub-item">
+                <a href="#" class="header__sub-link">Party</a>
+              </li>
+              <li class="header__sub-item">
+                <a href="#" class="header__sub-link">GYM</a>
+              </li>
+            </ul>
+          </li>
+          <li class="header__item">
+            <a href="#top-selling" class="header__link">On Sale</a>
+          </li>
+          <li class="header__item">
+            <a href="#new-arrivals" class="header__link">New Arrivals</a>
+          </li>
+          <li class="header__item">
+            <a href="#brands" class="header__link">Brands</a>
+          </li>
+        </ul>
+
+        <form action="#" class="header-form" method="GET">
+          <svg class="header-form__icon" width="24" height="24" aria-hidden="true">
+            <use xlink:href="images/sprite.svg#icon-search"></use>
+          </svg>
+          <input type="search" class="header-form__input" required placeholder="Search for products...">
+        </form>
+        <ul class="header__user-list">
+          <li class="header__user-item">
+            <button class="header__loop-mobile btn" type="button" aria-label="Кнопка поиска" id="loopBtn">
+              <svg width="24" height="24" aria-hidden="true">
+                <use xlink:href="images/sprite.svg#icon-search"></use>
+              </svg>
+            </button>
+          </li>
+          <li class="header__user-item">
+            <button class="header__user-btn btn">
+              <svg class="header__user-icon" width="24" height="24" aria-hidden="true">
+                <use xlink:href="images/sprite.svg#icon-cart"></use>
+              </svg>
+              <span class="header__user-count" id="basketCount">0</span>
+            </button>
+          </li>
+          <li class="header__user-item">
+            <button class="header__user-btn btn">
+              <svg class="header__user-icon" width="24" height="24" aria-hidden="true">
+                <use xlink:href="images/sprite.svg#icon-user"></use>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="modal-search">
+      <form action="#" class="header__form-mobile" method="GET" id="headerFormSearch">
+        <svg class="header__form-icon" width="24" height="24" aria-hidden="true">
+          <use xlink:href="images/sprite.svg#icon-search"></use>
+        </svg>
+        <input type="search" id="searchInput" class="header__form-input" required placeholder="Search for products...">
+      </form>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="container">
+        <h1 class="visually-hidden" aria-label="true">FIND CLOTHES THAT MATCHES YOUR STYLE</h1>
+        <div class="hero__inner">
+          <div class="hero__content">
+            <h2 class="hero__title">FIND CLOTHES THAT MATCHES YOUR STYLE</h2>
+            <p class="hero__descr">Browse through our diverse range of&nbsp;meticulously crafted garments, designed
+              to&nbsp;bring out your individuality and cater to&nbsp;your sense of&nbsp;style.
+            </p>
+            <a href="#" class="hero__link">Shop Now</a>
+            <ul class="hero__list-inner">
+              <li class="hero__list-item">
+                <p class="hero__list-heading"><span class="counter" data-counttarget="200">0</span>+</p>
+                <p class="hero__list-descr">International&nbsp;Brands</p>
+              </li>
+              <li class="hero__list-item">
+                <p class="hero__list-heading"><span class="counter" data-counttarget="2000">0</span></p>
+                <p class="hero__list-descr">High-Quality&nbsp;Products</p>
+              </li>
+              <li class="hero__list-item">
+                <p class="hero__list-heading"><span class="counter" data-counttarget="30000">0</span>+</p>
+                <p class="hero__list-descr">Happy&nbsp;Customers</p>
+              </li>
+            </ul>
+          </div>
+          <img src="images/hero-star-small.png" width="56" height="56" alt="star photo" loading="lazy"
+            class="hero__img-star-left">
+          <img src="images/hero-star-big.png" width="104" height="104" alt="star photo" loading="lazy"
+            class="hero__img-star-right">
+          <img src="images/hero-bg-mobile.png" loading="lazy" alt="hero mobile img" class="hero__img-mobile">
+        </div>
+      </div>
+    </section>
+    <section id="brands" class="brands">
+      <h2 class="visually-hidden">Brands title</h2>
+      <div class="container">
+        <div class="brands__wrapper">
+          <img src="images/hero-bottom-1.png" alt="versace-logo" loading="lazy" class="brands__img">
+          <img src="images/hero-bottom-2.png" alt="zara-logo" loading="lazy" class="brands__img">
+          <img src="images/hero-bottom-3.png" alt="gucci-logo" loading="lazy" class="brands__img">
+          <img src="images/hero-bottom-4.png" alt="prada-logo" loading="lazy" class="brands__img">
+          <img src="images/hero-bottom-5.png" alt="calvin klein-logo" loading="lazy" class="brands__img">
+        </div>
+      </div>
+    </section>
+    <section id="new-arrivals" class="new-arrivals">
+      <div class="container">
+        <h3 class="new-arrivals__heading">NEW ARRIVALS</h3>
+        <div class="new-wrapper">
+          <ul class="new-wrapper__list">
+            <li class="new-wrapper__item">
+              <div class="new-wrapper__card">
+                <img src="images/new-1.png" alt="clothes photo" loading="lazy" width="295" height="298"
+                  class="new-wrapper__img">
+                <div class="new-content">
+                  <h4 class="new-content__title">T-shirt with Tape Details</h4>
+                  <div class="new-content__rating-wrapper">
+                    <div class="new-content__stars">
+                      <svg class="new-content__stars-icon" width="18" height="18" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                      </svg>
+                      <svg class="new-content__stars-icon" width="18" height="18" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                      </svg>
+                      <svg class="new-content__stars-icon" width="18" height="18" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                      </svg>
+                      <svg class="new-content__stars-icon" width="18" height="18" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                      </svg>
+                      <svg class="new-content__stars-icon" width="18" height="18" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-star-half"></use>
+                      </svg>
+                    </div>
+                    <span class="new-content__rating">4.5/5</span>
+                  </div>
+                  <div class="new-prices">
+                    <span class="new-content__price">$120</span>
+
+                    <span class="new-content__discount">-20%</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="new-wrapper__item">
+              <div class="new-wrapper__card new-wrapper__card-discount">
+                <img src="images/new-2.png" alt="clothes photo" loading="lazy" width="295" height="298"
+                  class="new-wrapper__img">
+                <div class="new-content">
+                  <h4 class="new-content__title">SKINNY FIT JEANS</h4>
+                  <div class="new-content__rating-wrapper">
+                    <div class="new-content__stars">
+                      <svg class="new-content__stars-icon" width="18" height="18" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                      </svg>
+                      <svg class="new-content__stars-icon" width="18" height="18" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                      </svg>
+                      <svg class="new-content__stars-icon" width="18" height="18" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                      </svg>
+                      <svg class="new-content__stars-icon" width="18" height="18" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-star-half"></use>
+                      </svg>
+                    </div>
+                    <span class="new-content__rating">3.5/5</span>
+                  </div>
+                  <div class="new-prices">
+                    <span class="new-content__price">$240</span>
+                    <span class="new-content__price-old">$260</span>
+                    <span class="new-content__discount">-20%</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="new-wrapper__item">
+              <div class="new-wrapper__card">
+                <img src="images/new-3.png" alt="clothes photo" loading="lazy" width="295" height="298"
+                  class="new-wrapper__img">
+                <div class="new-content">
+                  <h4 class="new-content__title">CHECKERED SHIRT</h4>
+                  <div class="new-content__rating-wrapper">
+                    <div class="new-content__stars">
+                      <svg class="new-content__stars-icon" width="18" height="18" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                      </svg>
+                      <svg class="new-content__stars-icon" width="18" height="18" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                      </svg>
+                      <svg class="new-content__stars-icon" width="18" height="18" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                      </svg>
+                      <svg class="new-content__stars-icon" width="18" height="18" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                      </svg>
+                      <svg class="new-content__stars-icon" width="18" height="18" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-star-half"></use>
+                      </svg>
+                    </div>
+                    <span class="new-content__rating">4.5/5</span>
+                  </div>
+                  <div class="new-prices">
+                    <span class="new-content__price">$180</span>
+
+                    <span class="new-content__discount">-20%</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="new-wrapper__item">
+              <div class="new-wrapper__card new-wrapper__card-discount">
+                <img src="images/new-4.png" alt="clothes photo" loading="lazy" width="295" height="298"
+                  class="new-wrapper__img">
+                <div class="new-content">
+                  <h4 class="new-content__title">SLEEVE STRIPED T-SHIRT</h4>
+                  <div class="new-content__rating-wrapper">
+                    <div class="new-content__stars">
+                      <svg class="new-content__stars-icon" width="18" height="18" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                      </svg>
+                      <svg class="new-content__stars-icon" width="18" height="18" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                      </svg>
+                      <svg class="new-content__stars-icon" width="18" height="18" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                      </svg>
+                      <svg class="new-content__stars-icon" width="18" height="18" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                      </svg>
+                      <svg class="new-content__stars-icon" width="18" height="18" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-star-half"></use>
+                      </svg>
+                    </div>
+                    <span class="new-content__rating">4.5/5</span>
+                  </div>
+                  <div class="new-prices">
+                    <span class="new-content__price">$130</span>
+                    <span class="new-content__price-old">$160</span>
+                    <span class="new-content__discount">-30%</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <a href="new-arrivals.html" class="new-arrivals__view" target="_blank">View All</a>
+        </div>
+      </div>
+    </section>
+    <section id="top-selling" class="top-selling">
+      <div class="container">
+        <h3 class="top-selling__heading">top selling</h3>
+        <div class="top-selling">
+          <ul class="top-selling__list">
+            <li class="top-selling__item">
+              <div class="top-selling__card  top-selling__card-discount">
+                <img src="images/top-1.png" alt="clothes photo" loading="lazy" width="295" height="298"
+                  class="top-selling__img">
+                <div class="top-content">
+                  <h4 class="top-content__title">VERTICAL STRIPED SHIRT</h4>
+                  <div class="top-content__rating-wrapper">
+                    <div class="top-content__stars">
+                      <svg class="top-content__stars-icon" width="18" height="18" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                      </svg>
+                      <svg class="top-content__stars-icon" width="18" height="18" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                      </svg>
+                      <svg class="top-content__stars-icon" width="18" height="18" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                      </svg>
+                      <svg class="top-content__stars-icon" width="18" height="18" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                      </svg>
+                      <svg class="top-content__stars-icon" width="18" height="18" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                      </svg>
+                    </div>
+                    <span class="top-content__rating">5.0/5</span>
+                  </div>
+                  <div class="top-prices">
+                    <span class="top-content__price">$212</span>
+                    <span class="top-content__price-old">$232</span>
+                    <span class="top-content__discount">-20%</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="top-selling__item">
+              <div class="top-selling__card">
+                <img src="images/top-2.png" alt="clothes photo" loading="lazy" width="295" height="298"
+                  class="top-selling__img">
+                <div class="top-content">
+                  <h4 class="top-content__title">COURAGE GRAPHIC T-SHIRT</h4>
+                  <div class="top-content__rating-wrapper">
+                    <div class="top-content__stars">
+                      <svg class="top-content__stars-icon" width="18" height="18" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                      </svg>
+                      <svg class="top-content__stars-icon" width="18" height="18" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                      </svg>
+                      <svg class="top-content__stars-icon" width="18" height="18" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                      </svg>
+                      <svg class="top-content__stars-icon" width="18" height="18" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                      </svg>
+                    </div>
+                    <span class="top-content__rating">4.0/5</span>
+                  </div>
+                  <div class="top-prices">
+                    <span class="top-content__price">$145</span>
+
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="top-selling__item">
+              <div class="top-selling__card">
+                <img src="images/top-3.png" alt="clothes photo" loading="lazy" width="295" height="298"
+                  class="top-selling__img">
+                <div class="top-content">
+                  <h4 class="top-content__title">LOOSE FIT BERMUDA SHORTS</h4>
+                  <div class="top-content__rating-wrapper">
+                    <div class="top-content__stars">
+                      <svg class="top-content__stars-icon" width="18" height="18" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                      </svg>
+                      <svg class="top-content__stars-icon" width="18" height="18" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                      </svg>
+                      <svg class="top-content__stars-icon" width="18" height="18" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                      </svg>
+                    </div>
+                    <span class="top-content__rating">3.0/5</span>
+                  </div>
+                  <div class="top-prices">
+                    <span class="top-content__price">$80</span>
+
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="top-selling__item">
+              <div class="top-selling__card">
+                <img src="images/top-4.png" alt="clothes photo" loading="lazy" width="295" height="298"
+                  class="top-selling__img">
+                <div class="top-content">
+                  <h4 class="top-content__title">FADED SKINNY JEANS</h4>
+                  <div class="top-content__rating-wrapper">
+                    <div class="top-content__stars">
+                      <svg class="top-content__stars-icon" width="18" height="18" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                      </svg>
+                      <svg class="top-content__stars-icon" width="18" height="18" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                      </svg>
+                      <svg class="top-content__stars-icon" width="18" height="18" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                      </svg>
+                      <svg class="top-content__stars-icon" width="18" height="18" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                      </svg>
+                      <svg class="top-content__stars-icon" width="18" height="18" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-star-half"></use>
+                      </svg>
+                    </div>
+                    <span class="top-content__rating">4.5/5</span>
+                  </div>
+                  <div class="top-prices">
+                    <span class="top-content__price">$210</span>
+
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <a href="new-arrivals.html" class="top-selling__view" target="_blank">View All</a>
+        </div>
+      </div>
+    </section>
+    <section id="choose" class="choose">
+      <div class="container">
+        <div class="choose__inner">
+          <h3 class="choose__heading">BROWSE BY&nbsp;dress STYLE</h3>
+          <div class="choose__cards">
+            <div class="choose__card choose__card-short">
+              <picture>
+                <source media="(max-width: 768px)" srcset="images/choose-1-mob.png">
+                <img src="images/choose-1.png" alt="Formal image" class="choose__card-img">
+              </picture>
+              <a href="casual.html" target="_blank" class="choose__card-link">
+                <h5 class="choose__card-heading">Casual</h5>
+              </a>
+            </div>
+            <div class="choose__card choose__card-wide">
+              <picture>
+                <source media="(max-width: 768px)" srcset="images/choose-2-mob.png">
+                <img src="images/choose-2.png" alt="Formal image" class="choose__card-img">
+              </picture>
+              <a href="casual.html" class="choose__card-link">
+                <h5 class="choose__card-heading">Formal</h5>
+              </a>
+            </div>
+            <div class="choose__card choose__card-wide">
+              <picture>
+                <source media="(max-width: 768px)" srcset="images/choose-3-mob.png">
+                <img src="images/choose-3.png" alt="Formal image" class="choose__card-img">
+              </picture>
+              <a href="casual.html" class="choose__card-link">
+                <h5 class="choose__card-heading">Party</h5>
+              </a>
+            </div>
+            <div class="choose__card choose__card-short">
+              <picture>
+                <source media="(max-width: 768px)" srcset="images/choose-4-mob.png">
+                <img src="images/choose-4.png" alt="Formal image" class="choose__card-img">
+              </picture>
+              <a href="casual.html" class="choose__card-link">
+                <h5 class="choose__card-heading">Gym</h5>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="clients" class="clients">
+      <div class="container">
+        <div class="clients-top">
+          <h3 class="clients-top__heading">OUR HAPPY CUSTOMERS</h3>
+          <div class="clients-arrows">
+            <button class="clients-arrows__btn btn clients-arrows__btn-prev">
+              <svg class="clients__arrow-icon" width="24" height="24" aria-hidden="true">
+                <use xlink:href="images/sprite.svg#icon-arrow-left"></use>
+              </svg>
+            </button>
+            <button class="clients-arrows__btn btn clients-arrows__btn-next">
+              <svg class="clients__arrow-icon" width="24" height="24" aria-hidden="true">
+                <use xlink:href="images/sprite.svg#icon-arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="clients-card">
+                <div class="clients-card__stars">
+                  <svg width="18" height="18" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                  </svg>
+                  <svg width="18" height="18" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                  </svg>
+                  <svg width="18" height="18" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                  </svg>
+                  <svg width="18" height="18" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                  </svg>
+                  <svg width="18" height="18" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                  </svg>
+                </div>
+                <div class="clients-user">
+                  <h5 class="clients-card__name">Sarah M.</h5>
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-confirm"></use>
+                  </svg>
+                </div>
+                <p class="clients-card__text">
+                  &laquo;I&rsquo;m blown away by&nbsp;the quality and style of&nbsp;the clothes&nbsp;I received from
+                  Shop.co. From casual wear to&nbsp;elegant dresses, every piece I&rsquo;ve bought has exceeded
+                  my&nbsp;expectations.&raquo;
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="clients-card">
+                <div class="clients-card__stars">
+                  <svg width="18" height="18" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                  </svg>
+                  <svg width="18" height="18" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                  </svg>
+                  <svg width="18" height="18" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                  </svg>
+                  <svg width="18" height="18" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                  </svg>
+                  <svg width="18" height="18" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                  </svg>
+                </div>
+                <div class="clients-user">
+                  <h5 class="clients-card__name">Alex K.</h5>
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-confirm"></use>
+                  </svg>
+                </div>
+                <p class="clients-card__text">
+                  &laquo;Finding clothes that align with my&nbsp;personal style used to&nbsp;be&nbsp;a&nbsp;challenge
+                  until&nbsp;I discovered Shop.co. The range of&nbsp;options they offer is&nbsp;truly remarkable,
+                  catering to&nbsp;a&nbsp;variety of&nbsp;tastes and occasions.&raquo;
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="clients-card">
+                <div class="clients-card__stars">
+                  <svg width="18" height="18" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                  </svg>
+                  <svg width="18" height="18" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                  </svg>
+                  <svg width="18" height="18" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                  </svg>
+                  <svg width="18" height="18" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                  </svg>
+                  <svg width="18" height="18" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                  </svg>
+                </div>
+                <div class="clients-user">
+                  <h5 class="clients-card__name">James L.</h5>
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-confirm"></use>
+                  </svg>
+                </div>
+                <p class="clients-card__text">
+                  &laquo;As&nbsp;someone who&rsquo;s always on&nbsp;the lookout for unique fashion pieces, I&rsquo;m
+                  thrilled to&nbsp;have stumbled upon Shop.co. The selection of&nbsp;clothes is&nbsp;not only diverse
+                  but also on-point with the latest trends.&raquo;
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="clients-card">
+                <div class="clients-card__stars">
+                  <svg width="18" height="18" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                  </svg>
+                  <svg width="18" height="18" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                  </svg>
+                  <svg width="18" height="18" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                  </svg>
+                  <svg width="18" height="18" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                  </svg>
+                  <svg width="18" height="18" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                  </svg>
+                </div>
+                <div class="clients-user">
+                  <h5 class="clients-card__name">Sarah M.</h5>
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-confirm"></use>
+                  </svg>
+                </div>
+                <p class="clients-card__text">
+                  &laquo;I&rsquo;m blown away by&nbsp;the quality and style of&nbsp;the clothes&nbsp;I received from
+                  Shop.co. From casual wear to&nbsp;elegant dresses, every piece I&rsquo;ve bought has exceeded
+                  my&nbsp;expectations.&raquo;
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="clients-card">
+                <div class="clients-card__stars">
+                  <svg width="18" height="18" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                  </svg>
+                  <svg width="18" height="18" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                  </svg>
+                  <svg width="18" height="18" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                  </svg>
+                  <svg width="18" height="18" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                  </svg>
+                  <svg width="18" height="18" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                  </svg>
+                </div>
+                <div class="clients-user">
+                  <h5 class="clients-card__name">Alex K.</h5>
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-confirm"></use>
+                  </svg>
+                </div>
+                <p class="clients-card__text">
+                  &laquo;Finding clothes that align with my&nbsp;personal style used to&nbsp;be&nbsp;a&nbsp;challenge
+                  until&nbsp;I discovered Shop.co. The range of&nbsp;options they offer is&nbsp;truly remarkable,
+                  catering to&nbsp;a&nbsp;variety of&nbsp;tastes and occasions.&raquo;
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="clients-card">
+                <div class="clients-card__stars">
+                  <svg width="18" height="18" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                  </svg>
+                  <svg width="18" height="18" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                  </svg>
+                  <svg width="18" height="18" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                  </svg>
+                  <svg width="18" height="18" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                  </svg>
+                  <svg width="18" height="18" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-star-fill"></use>
+                  </svg>
+                </div>
+                <div class="clients-user">
+                  <h5 class="clients-card__name">James L.</h5>
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-confirm"></use>
+                  </svg>
+                </div>
+                <p class="clients-card__text">
+                  &laquo;As&nbsp;someone who&rsquo;s always on&nbsp;the lookout for unique fashion pieces, I&rsquo;m
+                  thrilled to&nbsp;have stumbled upon Shop.co. The selection of&nbsp;clothes is&nbsp;not only diverse
+                  but also on-point with the latest trends.&raquo;
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+    <div class="cookie" id="cookieConsent">
+      <div class="cookie__content">
+        <p class="cookie__descr">
+          Мы&nbsp;обрабатываем файлы cookie, чтобы улучшить работу сайта. Оставаясь на&nbsp;нашем сайте,
+          вы&nbsp;соглашаетесь с&nbsp;
+          <a href="#" class="cookie__link">Политикой пользовательских данных.</a>
+        </p>
+        <button class="cookie__btn cookie__btn--accept btn" id="cookieAccept">Принять</button>
+      </div>
+      <button class="cookie__btn btn" type="button" aria-label="Закрыть куки" id="cookieClose">
+        <svg class="cookie__icon" width="24" height="24" aria-hidden="true">
+          <use xlink:href="images/sprite.svg#icon-close"></use>
+        </svg>
+      </button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer-top">
+          <div class="footer-left">
+            <img src="images/logo.png" alt="shop logo" loading="lazy" class="footer-left__logo">
+            <p class="footer-left__text">
+              We&nbsp;have clothes that suits your style and which you&rsquo;re proud to&nbsp;wear. From women
+              to&nbsp;men.
+            </p>
+            <ul class="footer-left__list">
+              <li class="footer-left__item">
+                <a href="#" class="footer-left__link">
+                  <svg class="footer-left__icon" width="24" height="24" aria-hidden="true">
+                    <use class="footer-left__social" xlink:href="images/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-left__item">
+                <a href="#" class="footer-left__link">
+                  <svg class="footer-left__icon" width="24" height="24" aria-hidden="true">
+                    <use class="footer-left__social" xlink:href="images/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-left__item">
+                <a href="#" class="footer-left__link">
+                  <svg class="footer-left__icon" width="24" height="24" aria-hidden="true">
+                    <use class="footer-left__social" xlink:href="images/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-left__item">
+                <a href="https://endri94.github.io/My-portfolio/#projects" target="_blank" class="footer-left__link">
+                  <svg class="footer-left__icon" width="24" height="24" aria-hidden="true">
+                    <use class="footer-left__social" xlink:href="images/sprite.svg#icon-github"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-right">
+            <figure>
+              <span class="footer-right__heading">Company</span>
+              <ul class="footer-right__list">
+                <li class="footer-right__item">
+                  <a href="#" class="footer-right__link">About</a>
+                </li>
+                <li class="footer-right__item">
+                  <a href="#" class="footer-right__link">Features</a>
+                </li>
+                <li class="footer-right__item">
+                  <a href="#" class="footer-right__link">Works</a>
+                </li>
+                <li class="footer-right__item">
+                  <a href="#" class="footer-right__link">Career</a>
+                </li>
+              </ul>
+            </figure>
+
+            <figure>
+              <span class="footer-right__heading">Help</span>
+              <ul class="footer-right__list">
+                <li class="footer-right__item">
+                  <a href="#" class="footer-right__link">Customer Support</a>
+                </li>
+                <li class="footer-right__item">
+                  <a href="#" class="footer-right__link">Delivery Details</a>
+                </li>
+                <li class="footer-right__item">
+                  <a href="#" class="footer-right__link">Terms & Conditions</a>
+                </li>
+                <li class="footer-right__item">
+                  <a href="#" class="footer-right__link">Privacy Policy</a>
+                </li>
+              </ul>
+            </figure>
+
+            <figure>
+              <span class="footer-right__heading">FAQ</span>
+              <ul class="footer-right__list">
+                <li class="footer-right__item">
+                  <a href="#" class="footer-right__link">Account</a>
+                </li>
+                <li class="footer-right__item">
+                  <a href="#" class="footer-right__link">Manage Deliveries</a>
+                </li>
+                <li class="footer-right__item">
+                  <a href="#" class="footer-right__link">Orders</a>
+                </li>
+                <li class="footer-right__item">
+                  <a href="#" class="footer-right__link">Payments</a>
+                </li>
+              </ul>
+            </figure>
+
+            <figure>
+              <span class="footer-right__heading">Resources</span>
+              <ul class="footer-right__list">
+                <li class="footer-right__item">
+                  <a href="#" class="footer-right__link"> Free eBooks</a>
+                </li>
+                <li class="footer-right__item">
+                  <a href="#" class="footer-right__link">Development Tutorial</a>
+                </li>
+                <li class="footer-right__item">
+                  <a href="#" class="footer-right__link">How to - Blog</a>
+                </li>
+                <li class="footer-right__item">
+                  <a href="#" class="footer-right__link">Youtube Playlist</a>
+                </li>
+              </ul>
+            </figure>
+
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span class="footer-bottom__copyright">Shop.co &copy;&nbsp;2000-2025, All Rights Reserved</span>
+          <div class="footer-bottom__block">
+            <img src="images/visa.png" alt="visa photo" loading="lazy" class="footer-bottom__img">
+            <img src="images/mastercard.png" alt="mastercard photo" loading="lazy" class="footer-bottom__img">
+            <img src="images/paypal.png" alt="paypal photo" loading="lazy" class="footer-bottom__img">
+            <img src="images/applepay.png" alt="applepay photo" loading="lazy" class="footer-bottom__img">
+            <img src="images/google-pay.png" alt="googlepay photo" loading="lazy" class="footer-bottom__img">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="subscribe">
+      <div class="container">
+        <div class="subscribe__wrapper">
+          <p class="subscribe__heading">STAY UPTO DATE ABOUT OUR LATEST OFFERS</p>
+          <form action="https://httpbin.org/post" class="subscribe-form" id="subscribeForm">
+            <div class="subscribe-form__wrapper">
+              <svg class="subscribe-form__icon" width="24" height="24" aria-hidden="true">
+                <use xlink:href="images/sprite.svg#icon-email"></use>
+              </svg>
+              <input type="email" class="subscribe-form__input" placeholder="Enter your email address"
+                id="subscribeEmail">
+            </div>
+            <button class="subscribe-form__btn btn" type="submit">Subscribe to&nbsp;Newsletter</button>
+          </form>
+
+          <div id="successModal" class="modal hidden">
+            <div class="modal-content">
+              <div class="modal-wrapper">
+                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M29.8478 16.9022C29.9757 17.0299 30.0771 17.1815 30.1463 17.3485C30.2155 17.5154 30.2511 17.6943 30.2511 17.875C30.2511 18.0557 30.2155 18.2346 30.1463 18.4015C30.0771 18.5685 29.9757 18.7201 29.8478 18.8478L20.2228 28.4728C20.0951 28.6007 19.9435 28.7021 19.7766 28.7713C19.6096 28.8405 19.4307 28.8761 19.25 28.8761C19.0693 28.8761 18.8904 28.8405 18.7235 28.7713C18.5565 28.7021 18.4049 28.6007 18.2772 28.4728L14.1522 24.3478C13.8942 24.0898 13.7492 23.7399 13.7492 23.375C13.7492 23.0101 13.8942 22.6602 14.1522 22.4022C14.4102 22.1442 14.7601 21.9992 15.125 21.9992C15.4899 21.9992 15.8398 22.1442 16.0978 22.4022L19.25 25.5561L27.9022 16.9022C28.0299 16.7743 28.1815 16.6729 28.3485 16.6037C28.5154 16.5345 28.6943 16.4989 28.875 16.4989C29.0557 16.4989 29.2346 16.5345 29.4016 16.6037C29.5685 16.6729 29.7201 16.7743 29.8478 16.9022ZM39.875 22C39.875 25.5353 38.8267 28.9913 36.8625 31.9308C34.8984 34.8703 32.1067 37.1614 28.8405 38.5143C25.5742 39.8673 21.9802 40.2212 18.5128 39.5315C15.0454 38.8418 11.8603 37.1394 9.36047 34.6395C6.86061 32.1397 5.15818 28.9547 4.46847 25.4872C3.77876 22.0198 4.13274 18.4258 5.48566 15.1595C6.83858 11.8933 9.12966 9.10161 12.0692 7.13748C15.0087 5.17335 18.4647 4.125 22 4.125C26.7392 4.13 31.2829 6.01487 34.634 9.36599C37.9851 12.7171 39.87 17.2608 39.875 22ZM37.125 22C37.125 19.0086 36.2379 16.0843 34.576 13.597C32.914 11.1097 30.5518 9.1711 27.7881 8.02632C25.0244 6.88155 21.9832 6.58202 19.0493 7.16562C16.1153 7.74922 13.4203 9.18974 11.305 11.305C9.18975 13.4203 7.74923 16.1153 7.16563 19.0493C6.58203 21.9832 6.88155 25.0244 8.02633 27.7881C9.17111 30.5518 11.1097 32.914 13.597 34.576C16.0843 36.2379 19.0086 37.125 22 37.125C26.01 37.1204 29.8545 35.5255 32.69 32.69C35.5255 29.8545 37.1205 26.01 37.125 22Z"
+                    fill="#40BB71" />
+                </svg>
+                <span class="close" id="closeSuccessModal">
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-close"></use>
+                  </svg>
+                </span>
+                <h3 class="modal-wrapper__title">You are IN!</h3>
+                <span class="modal-content__descr">Thanks for your subscribe. Enjoy the fresh news from our
+                  partners</span>
+              </div>
+            </div>
+          </div>
+
+          <div id="errorModal" class="modal hidden">
+            <div class="modal-content">
+              <div class="modal-wrapper">
+                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M22 5.5V5.5C31.1135 5.5 38.5 12.8865 38.5 22V22C38.5 31.1135 31.1135 38.5 22 38.5V38.5C12.8865 38.5 5.5 31.1135 5.5 22V22C5.5 12.8865 12.8865 5.5 22 5.5Z"
+                    stroke="#FC5A5A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M22.0002 22.9167V13.75" stroke="#FC5A5A" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M21.9983 29.3333C21.7453 29.3333 21.54 29.5387 21.5418 29.7917C21.5418 30.0447 21.7472 30.25 22.0002 30.25C22.2532 30.25 22.4585 30.0447 22.4585 29.7917C22.4585 29.5387 22.2532 29.3333 21.9983 29.3333"
+                    stroke="#FC5A5A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span class="close" id="closeErrorModal">
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-close"></use>
+                  </svg>
+                </span>
+                <h3 class="modal-wrapper__title">Somehing goes wrong...</h3>
+                <span class="modal-content__descr">Message not sent. Try sent form again, contact with support team in
+                  case of failure.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+  <script defer src="swiper/swiper-bundle.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+
+</html>

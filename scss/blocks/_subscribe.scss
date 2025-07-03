@@ -1,0 +1,95 @@
+.subscribe {
+    position: absolute;
+    // bottom: 413px;
+    bottom: 89%;
+    left: 0;
+    right: 0;
+}
+
+.subscribe__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 212px;
+    padding: 36px 64px;
+    border-radius: 20px;
+    background-color: $color-black;
+
+    @include vp-1023 {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 32px;
+        padding: 32px 24px;
+    }
+}
+
+.subscribe__heading {
+    max-width: 551px;
+    width: 100%;
+    margin: 0;
+    font-family: $second-family;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 45px;
+    color: #fff;
+
+    @include vp-767 {
+        font-size: 32px;
+        line-height: 35px;
+    }
+}
+
+.subscribe-form {
+    max-width: 350px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    @include vp-1023 {
+        max-width: unset;
+    }
+}
+
+.subscribe-form__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 16px;
+    border-radius: 62px;
+    background: #fff;
+}
+
+
+.subscribe-form__input {
+    border: none;
+    outline: none;
+    width: 80%;
+    font-family: $font-family;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.just-validate-error-label {
+    position: absolute;
+    bottom: 5px;
+
+}
+
+.subscribe-form__btn {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 15px 88px;
+    border-radius: 62px;
+    background: #fff;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 16px;
+    color: #000;
+
+    @include vp-767 {
+        padding: 15px 40px;
+        font-size: 14px;
+    }
+}
