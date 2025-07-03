@@ -1,0 +1,78 @@
+.sign-up {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    height: 38px;
+    gap: 20px;
+    background-color: $color-black;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 38px;
+        background-color: $color-black;
+    }
+
+    &-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 20;
+        margin: 0 auto;
+
+        &__text {
+            margin: 0 auto 0 auto;
+            font-family: $font-family;
+            font-size: 14px;
+            color: $color-white;
+
+            @include vp-767 {
+                font-size: 12px;
+            }
+        }
+
+
+        &__link {
+            font-weight: 500;
+            color: $color-white;
+            text-decoration: underline;
+            text-decoration-skip-ink: none;
+            transition: $transition-300;
+
+            &:hover {
+                opacity: 0.5;
+            }
+
+            &:active {
+                opacity: 1;
+            }
+        }
+
+        &__close-btn {
+            padding: 5px;
+            background-color: transparent;
+            cursor: pointer;
+            border: none;
+            transition: $transition-300;
+
+            &:hover {
+                opacity: 0.5;
+            }
+
+            &:active {
+                opacity: 1;
+            }
+        }
+    }
+}
+.sign-up-wrapper__close-icon {
+    color: $color-white;
+}
