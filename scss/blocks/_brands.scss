@@ -1,0 +1,17 @@
+.brands {
+    padding: 42px 0;
+    background-color: $color-black;
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 46px;
+        justify-content: space-between;
+        align-items: center;
+
+        @include vp-767 {
+            gap: 34px;
+            justify-content: center;
+        }
+    }
+}

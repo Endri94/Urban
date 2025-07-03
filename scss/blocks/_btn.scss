@@ -1,0 +1,18 @@
+.btn {
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 11px 20px;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #1E222E;
+    background-color: #E3E5EB;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
